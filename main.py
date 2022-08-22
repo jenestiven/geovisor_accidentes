@@ -10,7 +10,7 @@ from dash.exceptions import PreventUpdate
 
 
 app = dash.Dash(__name__)
-app.title = 'Geoportal Accidentalidad' 
+app.title = 'Geovisor Accidentalidad' 
 
 app.layout = html.Div(
     style={'background':'#F8F8FF'}, 
@@ -23,7 +23,7 @@ app.layout = html.Div(
                     id = "geo-logo",
                     children=[html.Img(src="assets\globo.png")] 
                 ),
-                html.H2("Geoportal de accidentalidad en Cali")  
+                html.H2("Geovisor de accidentalidad en Cali")  
             ]),
         html.Div(
             className="pkcalc-bannerder",
