@@ -1,27 +1,13 @@
 
-import pandas as pd
 import plotly.express as px
+from data import data_heridos_opt,data_muertos_opt,años_heridos,años_muertos,sexo_heridos,sexo_muertos,dias_muertos,horas_muertos
 
-data_heridos_opt = pd.read_csv('data\dataset_heridos.csv')
-data_heridos_opt['EDAD'] = data_heridos_opt['EDAD'].replace('NS', 0)
-data_heridos_opt['EDAD'] = data_heridos_opt['EDAD'].astype(float)
-data_heridos_opt['EDAD'] = data_heridos_opt['EDAD'].astype(int)
-data_muertos_opt = pd.read_csv('data\dataset_muertos.csv')
-data_muertos_opt['EDAD'] = data_muertos_opt['EDAD'].replace('NS', 0)
-data_muertos_opt['EDAD'] = data_muertos_opt['EDAD'].astype(float)
-data_muertos_opt['EDAD'] = data_muertos_opt['EDAD'].astype(int)
-años_heridos = pd.read_csv('data\Años_heridos')
-sexo_heridos = pd.read_csv('data\Sexo_heridos')
-años_muertos = pd.read_csv('data\Años_muertos')
-dias_muertos = pd.read_csv('data\Dias_muertos')
-horas_muertos = pd.read_csv('data\Horas_muertos')
-sexo_muertos = pd.read_csv('data\Sexo_muertos')
+
 
 token = 'pk.eyJ1IjoiamVuZXN0aXZlbiIsImEiOiJjbDZpOGo0OGgxNTg2M2RrZXh2endtaTNxIn0._4TgQS_XY2QaJpix0HhtpA'
 
-
 def salida(value):
-    container4 = "Has seleccionado: {}".format(value)   
+    container4 = "_Has seleccionado: {}".format(value)   
 
     if value == 'MUERTES DIA':
         fig3 = px.bar(
@@ -32,7 +18,7 @@ def salida(value):
             x = 'Dias',             
             color='Cantidad',
             labels={'Dias':'Dias de la semana'},
-            height=400)
+            height=410)
     elif value == 'MUERTES HORA':
         fig3 = px.bar(
             horas_muertos,
@@ -41,7 +27,7 @@ def salida(value):
             y = 'Cantidad',
             x = 'Horas',
             color = 'Cantidad',
-            height=400)
+            height=410)
     elif value == 'MUERTES SEXO':
         fig3 = px.bar(
             sexo_muertos,
@@ -51,7 +37,7 @@ def salida(value):
             x = 'Sexo',
             color = 'Sexo',
             labels={'Sexo':'Genero'},
-            height=400)
+            height=410)
     elif value == 'MUERTES AÑO':
         fig3 = px.bar(
             años_muertos,
@@ -60,20 +46,20 @@ def salida(value):
             y = 'Cantidad',
             x = 'Años',
             color = 'Cantidad',
-            height=400)
+            height=410)
     elif value == 'MUERTES EDAD':
         fig3 = px.histogram(
             data_muertos_opt,
             title='Muertes por edad entre los años 2007-2013',
             x = 'EDAD',
-            height=400,
+            height=410,
             color ='EDAD')
     elif value == 'HERIDOS EDAD':
         fig3 = px.histogram(
             data_heridos_opt,
             title='Heridos por edad entre los años 2007-2014',
             x = 'EDAD',
-            height=400,
+            height=410,
             color ='EDAD')
     elif value == 'HERIDOS SEXO':
         fig3 = px.bar(
@@ -82,7 +68,7 @@ def salida(value):
             title='Heridos por sexo entre los años 2007-2014',
             y = 'Cantidad',
             x = 'Sexo',
-            height=400,
+            height=410,
             labels={'Sexo':'Genero'},
             color = 'Sexo')
     elif value == 'HERIDOS AÑO':
@@ -92,7 +78,7 @@ def salida(value):
             title='Heridos por año entre los años 2007-2014',
             y = 'Cantidad',
             x = 'Años',
-            height=400,
+            height=410,
             color = 'Cantidad')
 
     fig3.update_layout(xaxis_type='category')
@@ -101,8 +87,8 @@ def salida(value):
 
 
 def update_graph(option_selected,valuecap):
-    container1 = "Has seleccionado: {}".format(option_selected)
-    container2 = "Has seleccionado la cartográfia: {}".format(valuecap)
+    container1 = "_Has seleccionado: {}".format(option_selected)
+    container2 = "_Has seleccionado la cartográfia: {}".format(valuecap)
 
     if option_selected == "Muertes":
         fig1 = px.scatter_mapbox(
@@ -114,8 +100,9 @@ def update_graph(option_selected,valuecap):
             color="CLASE ACCIDENTE",
             labels={'CLASE ACCIDENTE':'CLASE DE ACCIDENTE'},
             size= 'AÑO',
-            zoom=9,
-            height=350)
+            center={"lat": 3.43722, "lon": -76.5225},
+            zoom=10,
+            height=493)
     elif option_selected == "Heridos":
         fig1 = px.scatter_mapbox(
             data_heridos_opt,
@@ -126,8 +113,9 @@ def update_graph(option_selected,valuecap):
             color="CLASE ACCIDENTE",
             labels={'CLASE ACCIDENTE':'CLASE DE ACCIDENTE'},
             size= 'EDAD',
-            zoom=9,
-            height=350)
+            center={"lat": 3.43722, "lon": -76.5225},
+            zoom=10,
+            height=493)
 
     fig1.update_layout(mapbox_style=valuecap,mapbox_accesstoken=token)
     fig1.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
@@ -136,26 +124,25 @@ def update_graph(option_selected,valuecap):
 
 
 def update_output1(value):
-    container3 = f'has seleccionado: {value}'
+    container3 = f'_Has seleccionado: {value}'
                
     fig2 = px.pie(
-        title='Datos de Muertos desde el 2007 al 2013 en Cali',
         data_frame = data_muertos_opt,
         names = value,
-        hole=.3)
+        height=410,
+        hole=.5)
     
     return container3,fig2
 
 
 def update_output(value):
-    container4 = f'has seleccionado: {value}'
+    container4 = f'_Has seleccionado: {value}'
 
     fig3 = px.pie(
-        title='Datos de Heridos desde el 2007 al 2014 en Cali',
         data_frame = data_heridos_opt,
         names = value,
-        hole=.3)
+        height=410,
+        hole=.5)
         
     return container4,fig3
-
 

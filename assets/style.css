@@ -1,0 +1,280 @@
+
+.header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background:rgb(2, 21, 70);  
+    height: 80px;
+}
+#geo-logo > img {
+    height: 60px !important;
+    margin-top: 9px;
+    margin-left: 30px;
+}
+#derecha-logo > img {
+    position:absolute;
+    height: 60px !important;
+    margin-top: 9px;
+    left: 1210px;
+}
+.header h2 {
+    position: absolute;
+    font-size: 20pt;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200 !important;
+    letter-spacing: 3px;
+    top: 2px;
+    margin-left: 135px;
+}
+.mapbox {
+    width: 1250px;
+    position: absolute;
+    top:80px;
+    left: 0px;
+    height: 493px;
+}
+.container-radio {
+    position: relative;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 400px;
+    left: 10px;
+    top: 90px;
+    border-radius: 7px;
+    box-shadow: 1px 1px 3px slategrey;
+    color: white;
+    background-color: rgb(2, 21, 70);
+}
+.infobox {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 509px;
+    left: 880px;
+    visibility: hidden;
+}
+#info > img {
+    position: absolute;
+    height: 55px;
+    visibility: visible;
+}
+#offcanvas {
+    position: relative;
+    color: white;
+    background-color: rgb(2, 21, 70);
+    border-radius: 10px;
+    font: 1em sans-serif;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    letter-spacing: 2px;
+}
+.footer {
+    position:absolute;
+    top:1490px !important;
+    left: 0px;
+    width: 100%;
+    background: rgb(2, 21, 70);
+    color: white;
+    font-size: 20px;
+}
+#github >img {
+    position:absolute;
+    height: 60px !important;
+    top: 0px;
+    left: 1180px;
+}
+#facebook > img {
+    position:absolute;
+    height: 60px !important;
+    top: 0px;
+    left: 1140px;
+}
+#twiter >img {
+    position:absolute;
+    height: 60px !important;
+    top: 0px;
+    left: 1100px;
+}
+.footer h2 {
+    font-size: 17pt;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200 !important;
+    letter-spacing: 3px;
+    position: left;
+    margin-left: 20px;
+}
+.footer h3 {
+    position: relative;
+    width: 100px;
+    font-size: 10pt;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200 !important;
+    letter-spacing: 1px;
+    left: 1000px;
+}
+.statisticsbox {
+    position: absolute;
+    top: 573px;
+    height: 920px;
+    width: 901px;
+    left: 0px;
+    background-color: #F2F2F0; 
+}
+.deathsbox {
+    position: absolute;
+    top : 25px;
+    height: 420px;
+    width: 408px;
+    left: 25px;
+    background-color:#EDE9DD;
+    border-radius: 7px;
+    box-shadow: 1px 1px 3px slategrey;
+}
+.deaths-pie{
+    position:inherit;
+    top:5px !important;
+    width: 400px;
+    left: 5px;
+    right: 5px;
+}
+.label-m {
+    position: inherit;
+    top: 355px;
+    left: 25px;
+    width: 335px;
+    height: 50px;
+    background-color:rgb(2, 21, 70);
+    border-radius: 7px;
+    box-shadow:1px 1px 3px gray;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 25px;
+    font-size: 13pt;
+
+}
+.hurtsbox {
+    position: absolute;
+    top : 25px;
+    height: 420px;
+    width: 408px;
+    left: 465px;
+    background-color:#EDE9DD;
+    border-radius: 7px;
+    box-shadow: 1px 1px 3px slategrey;
+}
+.hurts-pie{
+    position:inherit;
+    top:5px !important;
+    width: 400px;
+    left: 5px;
+    right: 5px;
+}
+.label-h {
+    position: inherit;
+    top: 355px;
+    left: 25px;
+    width: 335px;
+    height: 50px;
+    background-color:rgb(2, 21, 70);
+    border-radius: 7px;
+    box-shadow:1px 1px 3px gray;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 25px;
+    font-size: 13pt;
+
+}
+.histogrambox {
+    position: absolute;
+    top : 470px;
+    height: 420px;
+    width: 850px;
+    left: 25px;
+    background-color:#EDE9DD;
+    border-radius: 7px;
+    box-shadow: 1px 1px 3px slategrey;
+}
+.histogramas{
+    position:absolute;
+    top:5px !important;
+    width: 840px;
+    left: 5px;
+    font-size: 5px;
+}
+.labeldeaths {
+    position: absolute;
+    top: 600px;
+    height: 40px;
+    width: 315px;
+    left: 925px;
+    background-color: #F2F2F0;
+    border-radius: 7px;
+    box-shadow: 1px 1px 3px slategrey;
+}
+#p1 {
+    position: absolute;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 13pt;
+    left: 10px;
+}
+.labelhurts {
+    position: absolute;
+    top: 730px;
+    height: 40px;
+    width: 315px;
+    left: 925px;
+    background-color: #F2F2F0;
+    border-radius: 7px;
+    box-shadow: 1px 1px 3px slategrey;
+}
+#p2 {
+    position: absolute;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 13pt;
+    left: 10px;
+}
+.labelhistogram {
+    position: absolute;
+    top: 1050px;
+    height: 40px;
+    width: 315px;
+    left: 925px;
+    background-color: #F2F2F0;
+    border-radius: 7px;
+    box-shadow: 1px 1px 3px slategrey;
+}
+#p3 {
+    position: absolute;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 13pt;
+    left: 10px;
+}
+.dropdown-d {
+    position: absolute;
+    top: 660px;
+    height: 40px;
+    width: 315px;
+    left: 925px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.dropdown-h {
+    position: absolute;
+    top: 790px;
+    height: 40px;
+    width: 315px;
+    left: 925px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.dropdown-his {
+    position: absolute;
+    top: 1110px;
+    height: 40px;
+    width: 315px;
+    left: 925px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
