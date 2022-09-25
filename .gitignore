@@ -1,0 +1,4 @@
+geo
+*.pyc
+.DS_Store
+.env

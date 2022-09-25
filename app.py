@@ -12,6 +12,8 @@ app = dash.Dash(__name__)
 app.title = 'Geovisor Accidentalidad' 
 app._favicon = 'logo.png'
 
+server = app.server
+
 app.layout = html.Div(
     children=[
 
