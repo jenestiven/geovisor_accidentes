@@ -284,7 +284,7 @@ def c_salida(value):
         raise PreventUpdate
     else:
         return salida(value)
-    
+        
 if __name__ == '__main__':
     app.run_server(debug=True)
 
